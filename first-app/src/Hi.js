@@ -14,7 +14,8 @@ import React, { Component } from "react";
 const Hi = () =>{
     return (
         <div>
-            <h1>Aloha</h1>
+            <hr></hr>
+            <h1>HI</h1>
             <p>This is Hi component!</p>
         </div>
     );

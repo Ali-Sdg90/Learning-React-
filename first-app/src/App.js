@@ -1,7 +1,10 @@
 import React from "react";
 
-import Aloha from "./Aloha";
+import DynamicContent from "./DynamicContent";
 import Hi from "./Hi";
+import Info from "./Info";
+import AddHr from "./AddHr";
+import InfoFunc from "./InfoFunc";
 
 class App extends React.Component {
     render() {
@@ -20,7 +23,14 @@ class App extends React.Component {
                 <p>React!</p>
                 <Hi />
                 <Hi />
-                <Aloha/>
+                <DynamicContent />
+                <Info name="Ali" age="21" favColor="Blue" />
+                <Info name="Navid" age="82" favColor="Red" />
+                <Info name="Hanieh" age="21" favColor="Blue">
+                    I Love Her :&#41;
+                </Info>
+                <InfoFunc name="Function" age="Cooler" favColor="undefined" />
+                <AddHr />
             </>
         );
     }
