@@ -27,7 +27,15 @@ class App extends React.Component {
         return (
             <>
                 <h1 className="HSAS">Aloha</h1>
-                <p>React!</p>
+                <p
+                    style={{
+                        color: "red",
+                        letterSpacing: "1px",
+                        fontSize: "20px",
+                    }}
+                >
+                    React!
+                </p>
                 <Hi />
                 <Hi />
                 <DynamicContent />
