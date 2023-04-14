@@ -5,6 +5,9 @@ import Hi from "./Hi";
 import Info from "./Info";
 import AddHr from "./AddHr";
 import InfoFunc from "./InfoFunc";
+import State from "./State";
+import SetState from "./SetState";
+import SetState2 from "./SetState2";
 
 class App extends React.Component {
     render() {
@@ -31,6 +34,9 @@ class App extends React.Component {
                 </Info>
                 <InfoFunc name="Function" age="Cooler" favColor="undefined" />
                 <AddHr />
+                <State />
+                <SetState />
+                <SetState2 />
             </>
         );
     }
