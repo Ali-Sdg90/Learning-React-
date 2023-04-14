@@ -1,0 +1,15 @@
+body {
+    background: rgb(19, 22, 21);
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    margin: 0 30px;
+}
+
+button {
+    background: #333;
+    color: white;
+}
+
+.HSAS {
+    color: rgb(190, 43, 43);
+}

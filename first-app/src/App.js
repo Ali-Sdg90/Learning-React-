@@ -8,6 +8,10 @@ import InfoFunc from "./InfoFunc";
 import State from "./State";
 import SetState from "./SetState";
 import SetState2 from "./SetState2";
+import DestructuringC from "./DestructuringC";
+import DestructuringF from "./DestructuringF";
+
+import "./App.css";
 
 class App extends React.Component {
     render() {
@@ -22,7 +26,7 @@ class App extends React.Component {
 
         return (
             <>
-                <h1 className="HS&AS">Aloha</h1>
+                <h1 className="HSAS">Aloha</h1>
                 <p>React!</p>
                 <Hi />
                 <Hi />
@@ -37,6 +41,13 @@ class App extends React.Component {
                 <State />
                 <SetState />
                 <SetState2 />
+                <DestructuringC lastName="Sadeghi" favColor="Blue" />
+                <DestructuringF
+                    name="Ali"
+                    age="21"
+                    lastName="Sadeghi"
+                    favColor="Blue"
+                />
             </>
         );
     }
