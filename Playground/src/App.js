@@ -10,8 +10,10 @@ import SetState from "./SetState";
 import SetState2 from "./SetState2";
 import DestructuringC from "./DestructuringC";
 import DestructuringF from "./DestructuringF";
+import MuduleCSS from "./MuduleCSS";
 
 import "./App.css";
+import styles from "./App.module.css";
 
 class App extends React.Component {
     render() {
@@ -56,6 +58,8 @@ class App extends React.Component {
                     lastName="Sadeghi"
                     favColor="Blue"
                 />
+                <p className={styles.moduleTest}>module CSS in App.js</p>
+                <MuduleCSS />
             </>
         );
     }

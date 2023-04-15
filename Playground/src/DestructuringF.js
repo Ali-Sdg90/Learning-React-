@@ -5,7 +5,7 @@ const DestructuringF = ({ lastName, favColor, name, age }) => {
         <>
             <hr></hr>
             <p>Destructuring Function Component</p>
-            <p>
+            <p className="blueText">
                 {name} {lastName} is {age} yo and favColor is {favColor}.
             </p>
         </>
