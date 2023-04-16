@@ -20,6 +20,7 @@
     padding: 10px;
     padding-top: 13px;
     font-size: 1rem;
+    overflow: hidden;
 }
 
 .container input::placeholder {

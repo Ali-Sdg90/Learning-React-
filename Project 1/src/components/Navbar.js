@@ -11,6 +11,8 @@ const Navbar = () => {
                     <li>Home</li>
                     <li>Products</li>
                     <li>About Us</li>
+                    <li>Services</li>
+                    <li>FAQ</li>
                 </ul>
             </div>
             <div className={styles.logo}>

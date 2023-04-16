@@ -11,6 +11,9 @@ import SetState2 from "./SetState2";
 import DestructuringC from "./DestructuringC";
 import DestructuringF from "./DestructuringF";
 import MuduleCSS from "./MuduleCSS";
+import ScssInReact from "./ScssInReact";
+import FunctionEvent from "./FunctionEvent";
+import ClassEvent from "./ClassEvent";
 
 import "./App.css";
 import styles from "./App.module.css";
@@ -60,6 +63,12 @@ class App extends React.Component {
                 />
                 <p className={styles.moduleTest}>module CSS in App.js</p>
                 <MuduleCSS />
+                <ScssInReact />
+                <br></br>
+                <span>
+                    <FunctionEvent /> <ClassEvent />
+                </span>
+                <br></br>
             </>
         );
     }
