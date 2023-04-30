@@ -14,6 +14,7 @@ import MuduleCSS from "./MuduleCSS";
 import ScssInReact from "./ScssInReact";
 import FunctionEvent from "./FunctionEvent";
 import ClassEvent from "./ClassEvent";
+import Inputs from "./Inputs";
 
 import "./App.css";
 import styles from "./App.module.css";
@@ -69,6 +70,8 @@ class App extends React.Component {
                     <FunctionEvent /> <ClassEvent />
                 </span>
                 <br></br>
+                <AddHr />
+                <Inputs />
             </>
         );
     }
