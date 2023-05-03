@@ -16,6 +16,7 @@ import FunctionEvent from "./components/FunctionEvent";
 import ClassEvent from "./components/ClassEvent";
 import Inputs from "./components/Inputs";
 import Conditional from "./components/Conditional";
+import ShowInfoRecap from "./components/ShowInfoRecap";
 
 import styles from "./components/App.module.css";
 import "./App.css";
@@ -75,6 +76,7 @@ class App extends React.Component {
                 <Inputs />
                 <Conditional />
                 <AddHr /> 
+                <ShowInfoRecap/>
             </>
         );
     }
