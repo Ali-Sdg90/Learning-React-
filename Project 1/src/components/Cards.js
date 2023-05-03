@@ -8,13 +8,34 @@ import cssIcon from "../images/css-icon.png";
 import jsIcon from "../images/js-icon.png";
 
 class Cards extends Component {
+    constructor() {
+        super();
+        this.state = {
+            langInfo: [
+                { id: 1, image: cppIcon, name: "CPP", salary: "5000 $" },
+                { id: 2, image: htmlIcon, name: "HTML", salary: "8000 $" },
+                { id: 3, image: cssIcon, name: "CSS", salary: "7000 $" },
+                { id: 4, image: jsIcon, name: "JavaScript", salary: "10000 $" },
+            ],
+        };
+    }
+
     render() {
         return (
-            <div className={styles.container}>
-                <Card image={cppIcon} name="CPP" salary="5000 $" />
+            <div className={styles.container} key={this.state.id}>
+                {/* <Card image={cppIcon} name="CPP" salary="5000 $" />
                 <Card image={htmlIcon} name="HTML" salary="8000 $" />
                 <Card image={cssIcon} name="CSS" salary="7000 $" />
-                <Card image={jsIcon} name="JavaScript" salary="10000 $" />
+                <Card image={jsIcon} name="JavaScript" salary="10000 $" /> */}
+
+                {this.state.langInfo.map((lang) => {
+                    <Card
+                        image={lang.image}
+                        name={lang.name}
+                        salary={lang.salary}
+                    />;
+                    <p>hi</p>
+                })}
             </div>
         );
     }
