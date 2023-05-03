@@ -9,13 +9,12 @@ import jsIcon from "../images/js-icon.png";
 
 class Cards extends Component {
     render() {
-        let orderCounter = 0;
         return (
             <div className={styles.container}>
-                <Card image={cppIcon} name="CPP" order={++orderCounter} />
-                <Card image={htmlIcon} name="HTML" order={++orderCounter} />
-                <Card image={cssIcon} name="CSS" order={++orderCounter} />
-                <Card image={jsIcon} name="JavaScript" order={++orderCounter} />
+                <Card image={cppIcon} name="CPP" salary="5000 $" />
+                <Card image={htmlIcon} name="HTML" salary="8000 $" />
+                <Card image={cssIcon} name="CSS" salary="7000 $" />
+                <Card image={jsIcon} name="JavaScript" salary="10000 $" />
             </div>
         );
     }

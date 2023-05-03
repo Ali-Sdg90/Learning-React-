@@ -6,7 +6,7 @@ class ShowInfoRecap extends Component {
     constructor() {
         super();
         this.state = {
-            text: "",
+            text: "Aloha",
             option: "option2",
             isLoggedIn: false,
             chanageOrder: 0,
@@ -14,11 +14,12 @@ class ShowInfoRecap extends Component {
     }
 
     submitInput = (event) => {
-        this.setState((pervState) => ({
-            chanageOrder: pervState.chanageOrder + 1,
-        }),()=>(
-            console.log("Change!")
-        ));
+        this.setState(
+            (pervState) => ({
+                chanageOrder: pervState.chanageOrder + 1,
+            }),
+            () => console.log("Change!")
+        );
     };
 
     changeOptions = (event) => {
@@ -101,14 +102,16 @@ class ShowInfoRecap extends Component {
                 >
                     Change
                 </button>
-                <span> -({chanageOrder+1})-</span>
+                <span> -({chanageOrder + 1})-</span>
                 <br></br>
 
                 <p className={styles.input}>{input}</p>
 
                 <p>
-                    output : text="{text}" option="{option}" isLoggedIn="
-                    {String(isLoggedIn)}"
+                    output : text=<span className={styles.output}>{text}</span>
+                     option=<span className={styles.output}>{option}</span>
+                    isLoggedIn=
+                    <span className={styles.output}>{String(isLoggedIn)}</span>
                 </p>
             </>
         );

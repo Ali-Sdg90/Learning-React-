@@ -17,6 +17,7 @@ import ClassEvent from "./components/ClassEvent";
 import Inputs from "./components/Inputs";
 import Conditional from "./components/Conditional";
 import ShowInfoRecap from "./components/ShowInfoRecap";
+import MapComponent from "./components/MapAndKey";
 
 import styles from "./components/App.module.css";
 import "./App.css";
@@ -49,8 +50,8 @@ class App extends React.Component {
                 <DynamicContent />
                 <Info name="Ali" age="21" favColor="Blue" />
                 <Info name="Navid" age="82" favColor="Red" />
-                <Info name="Hanieh" age="21" favColor="Blue">
-                    I Love Her :&#41;
+                <Info name="Hanieh" age="21" favColor="Purple">
+                    IlH
                 </Info>
                 <InfoFunc name="Function" age="Cooler" favColor="undefined" />
                 <AddHr />
@@ -72,11 +73,14 @@ class App extends React.Component {
                     <FunctionEvent /> <ClassEvent />
                 </span>
                 <br></br>
-                <AddHr /> 
+                <AddHr />
                 <Inputs />
                 <Conditional />
-                <AddHr /> 
-                <ShowInfoRecap/>
+                <AddHr />
+                <ShowInfoRecap />
+                <AddHr />
+                <MapComponent />
+                <AddHr />
             </>
         );
     }

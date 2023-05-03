@@ -6,3 +6,12 @@
 .input{
     height: 20px;
 }
+
+.output{
+    background: white;
+    color: black;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin: 2px;
+}
