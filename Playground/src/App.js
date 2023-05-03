@@ -15,6 +15,7 @@ import ScssInReact from "./ScssInReact";
 import FunctionEvent from "./FunctionEvent";
 import ClassEvent from "./ClassEvent";
 import Inputs from "./Inputs";
+import Conditional from "./Conditional";
 
 import "./App.css";
 import styles from "./App.module.css";
@@ -70,8 +71,10 @@ class App extends React.Component {
                     <FunctionEvent /> <ClassEvent />
                 </span>
                 <br></br>
-                <AddHr />
+                <AddHr /> 
                 <Inputs />
+                <Conditional />
+                <AddHr /> 
             </>
         );
     }
