@@ -1,24 +1,24 @@
 import React from "react";
 
-import DynamicContent from "./DynamicContent";
-import Hi from "./Hi";
-import Info from "./Info";
-import AddHr from "./AddHr";
-import InfoFunc from "./InfoFunc";
-import State from "./State";
-import SetState from "./SetState";
-import SetState2 from "./SetState2";
-import DestructuringC from "./DestructuringC";
-import DestructuringF from "./DestructuringF";
-import MuduleCSS from "./MuduleCSS";
-import ScssInReact from "./ScssInReact";
-import FunctionEvent from "./FunctionEvent";
-import ClassEvent from "./ClassEvent";
-import Inputs from "./Inputs";
-import Conditional from "./Conditional";
+import DynamicContent from "./components/DynamicContent";
+import Hi from "./components/Hi";
+import Info from "./components/Info";
+import AddHr from "./components/AddHr";
+import InfoFunc from "./components/InfoFunc";
+import State from "./components/State";
+import SetState from "./components/SetState";
+import SetState2 from "./components/SetState2";
+import DestructuringC from "./components/DestructuringC";
+import DestructuringF from "./components/DestructuringF";
+import MuduleCSS from "./components/MuduleCSS";
+import ScssInReact from "./components/ScssInReact";
+import FunctionEvent from "./components/FunctionEvent";
+import ClassEvent from "./components/ClassEvent";
+import Inputs from "./components/Inputs";
+import Conditional from "./components/Conditional";
 
+import styles from "./components/App.module.css";
 import "./App.css";
-import styles from "./App.module.css";
 
 class App extends React.Component {
     render() {
