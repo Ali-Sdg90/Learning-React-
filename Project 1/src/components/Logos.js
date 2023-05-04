@@ -1,21 +1,41 @@
-import React from "react";
+import React, { Component } from "react";
 
 import styles from "./Logos.module.css";
+import Logo from "./Logo";
+
 import windowsIcon from "../images/windows-icon.png";
 import macOsIcon from "../images/macOs-icon.png";
 import linuxIcon from "../images/linux-icon.png";
 
-const Logos = () => {
-    return (
-        <div className={styles.container}>
-            <h3>Which one is better?</h3>
-            <div>
-                <img src={windowsIcon} alt="operating system image" />
-                <img src={macOsIcon} alt="operating system image" />
-                <img src={linuxIcon} alt="operating system image" />
+class Logos extends Component {
+    constructor() {
+        super();
+        this.state = {
+            logos: [
+                { name: "Windows", src: windowsIcon },
+                { name: "MacOs", src: macOsIcon },
+                { name: "Linux", src: linuxIcon },
+            ],
+        };
+    }
+    render() {
+        return (
+            <div className={styles.container}>
+                <h3>Which one is better?</h3>
+                <div>
+                    {this.state.logos.map((logo) => {
+                        return (
+                            <Logo
+                                name={logo.name}
+                                src={logo.src}
+                                id={logo.name}
+                            />
+                        );
+                    })}
+                </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
 
 export default Logos;

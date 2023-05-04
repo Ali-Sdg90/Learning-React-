@@ -5,6 +5,13 @@
     overflow: hidden;
     box-shadow: 0 0 4px rgb(189, 189, 189);
     padding: 5px;
+    opacity: 0.85;
+    transition: opacity 1.5s;
+}
+
+.container:hover{
+    opacity: 1;
+    transition: opacity 0.15s;
 }
 
 .container img {

@@ -20,4 +20,5 @@
     width: 300px;
     cursor: pointer;
     overflow: hidden;
+    transition: transform 0.2s;
 }
