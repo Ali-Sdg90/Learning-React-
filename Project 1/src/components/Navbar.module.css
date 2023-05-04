@@ -13,6 +13,11 @@
     width: 60px;
     padding: 5px;
     margin: auto 0;
+    transition: transform 0.2s;
+}
+
+.logo:hover{
+    transform: scale(1.05);
 }
 
 .list {
@@ -25,6 +30,7 @@
     cursor: pointer;
     color: white;
     font-weight: bold;
+    transition: color 0.15s;
 }
 
 .list li:hover {

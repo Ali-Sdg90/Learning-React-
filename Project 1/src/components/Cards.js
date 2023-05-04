@@ -29,12 +29,13 @@ class Cards extends Component {
                 <Card image={jsIcon} name="JavaScript" salary="10000 $" /> */}
 
                 {this.state.langInfo.map((lang) => {
-                    <Card
-                        image={lang.image}
-                        name={lang.name}
-                        salary={lang.salary}
-                    />;
-                    <p>hi</p>
+                    return (
+                        <Card
+                            image={lang.image}
+                            name={lang.name}
+                            salary={lang.salary}
+                        />
+                    );
                 })}
             </div>
         );
