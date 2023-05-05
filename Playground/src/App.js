@@ -18,6 +18,7 @@ import Inputs from "./components/Inputs";
 import Conditional from "./components/Conditional";
 import ShowInfoRecap from "./components/ShowInfoRecap";
 import MapComponent from "./components/MapAndKey";
+import LifecycleBtn from "./components/LifecycleBtn";
 
 import styles from "./components/App.module.css";
 import "./App.css";
@@ -81,6 +82,7 @@ class App extends React.Component {
                 <AddHr />
                 <MapComponent />
                 <AddHr />
+                <LifecycleBtn />
             </>
         );
     }
