@@ -20,6 +20,9 @@ import ShowInfoRecap from "./components/ShowInfoRecap";
 import MapComponent from "./components/MapAndKey";
 import LifecycleBtn from "./components/LifecycleBtn";
 import Ref from "./components/Ref";
+import RefExample from "./components/RefExample";
+import ChildWithError from "./components/ChildWithError";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 import styles from "./components/App.module.css";
 import "./App.css";
@@ -85,6 +88,10 @@ class App extends React.Component {
                 <AddHr />
                 <LifecycleBtn />
                 <Ref />
+                <RefExample />
+                <ErrorBoundary>
+                    <ChildWithError />
+                </ErrorBoundary>
             </>
         );
     }

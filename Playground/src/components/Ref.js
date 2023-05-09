@@ -17,7 +17,7 @@ class Ref extends Component {
             inputRefState: this.inputRef.current.value,
             rageRefState: this.rageRef.current.value,
         });
-        console.log(this.inputRef.current.value);
+        // console.log(this.inputRef.current.value);
         // console.log(this.rageRef.current.value);
     };
 
