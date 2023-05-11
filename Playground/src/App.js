@@ -26,6 +26,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import Realtime from "./components/Realtime";
 import LiftingStateUp from "./components/LiftingStateUp";
 import HOCChild1 from "./components/HOCChild1";
+import HOCChild2 from "./components/HOCChild2";
 
 import styles from "./components/App.module.css";
 import "./App.css";
@@ -135,6 +136,7 @@ class App extends React.Component {
                 <p>input range: {this.state.inputRangeRefState}</p>
                 <AddHr />
                 <HOCChild1 />
+                <HOCChild2 />
             </>
         );
     }

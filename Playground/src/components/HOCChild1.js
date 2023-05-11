@@ -3,24 +3,31 @@ import React, { Component } from "react";
 import HOC from "./HOC";
 
 class HOCChild1 extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            apple: 0,
-        };
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         apple: 0,
+    //     };
+    // }
 
-    addToCount = () => {
-        this.setState((prevState) => ({
-            apple: prevState.apple + 1,
-        }));
-    };
+    // addToCount = () => {
+    //     this.setState((prevState) => ({
+    //         apple: prevState.apple + 1,
+    //     }));
+    // };
 
     render() {
+        const { number, addToCount } = this.props;
+
         return (
             <div>
-                <p>number of apples : {this.state.apple}</p>
-                <button onClick={this.addToCount}>Add Apple</button>
+                <p>
+                    <strong>Heigher Order Component :</strong>
+                </p>
+                <p>
+                    Number of {number === 1 ? "apple" : "apples"} : {number}
+                </p>
+                <button onClick={addToCount}>Add Apple</button>
             </div>
         );
     }
