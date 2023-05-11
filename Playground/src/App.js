@@ -25,6 +25,7 @@ import ChildWithError from "./components/ChildWithError";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Realtime from "./components/Realtime";
 import LiftingStateUp from "./components/LiftingStateUp";
+import HOCChild1 from "./components/HOCChild1";
 
 import styles from "./components/App.module.css";
 import "./App.css";
@@ -47,7 +48,9 @@ class App extends React.Component {
 
     inputTextChange = () => {
         this.setState({
-            inputTextRefState: this.inputTextRef.current.value ? this.inputTextRef.current.value : "empty",
+            inputTextRefState: this.inputTextRef.current.value
+                ? this.inputTextRef.current.value
+                : "empty",
         });
     };
 
@@ -131,6 +134,7 @@ class App extends React.Component {
                 <p>input text: {this.state.inputTextRefState}</p>
                 <p>input range: {this.state.inputRangeRefState}</p>
                 <AddHr />
+                <HOCChild1 />
             </>
         );
     }
