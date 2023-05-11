@@ -27,6 +27,7 @@ import Realtime from "./components/Realtime";
 import LiftingStateUp from "./components/LiftingStateUp";
 import HOCChild1 from "./components/HOCChild1";
 import HOCChild2 from "./components/HOCChild2";
+import GetPost from "./components/Fetch";
 
 import styles from "./components/App.module.css";
 import "./App.css";
@@ -137,6 +138,7 @@ class App extends React.Component {
                 <AddHr />
                 <HOCChild1 />
                 <HOCChild2 />
+                <GetPost />
             </>
         );
     }

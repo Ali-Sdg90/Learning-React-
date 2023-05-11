@@ -1,0 +1,19 @@
+.container{
+    background: rgb(78, 78, 78);
+    margin: 10px;
+    margin-top: 30px;
+    border-radius: 10px;
+    padding: 3px 20px;
+}
+
+.fetch{
+    background: rgb(209, 64, 64);
+    border: 2px solid rgb(255, 171, 171);
+    box-shadow: 0 0 5px red;
+    color: rgb(51, 0, 0);
+    font-family: sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline;
+    letter-spacing: 1px;
+}
