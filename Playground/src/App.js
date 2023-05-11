@@ -23,21 +23,41 @@ import Ref from "./components/Ref";
 import RefExample from "./components/RefExample";
 import ChildWithError from "./components/ChildWithError";
 import ErrorBoundary from "./components/ErrorBoundary";
+import Realtime from "./components/Realtime";
+import LiftingStateUp from "./components/LiftingStateUp";
 
 import styles from "./components/App.module.css";
 import "./App.css";
 
 class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.inputTextRef = React.createRef();
+        this.inputRangeRef = React.createRef();
+
+        this.state = {
+            inputTextRefState: "",
+            inputRangeRefState: 0,
+        };
+    }
+
+    componentDidMount = () => {
+        this.inputTextChange();
+    };
+
+    inputTextChange = () => {
+        this.setState({
+            inputTextRefState: this.inputTextRef.current.value ? this.inputTextRef.current.value : "empty",
+        });
+    };
+
+    inputRangeChange = () => {
+        this.setState({
+            inputRangeRefState: this.inputRangeRef.current.value,
+        });
+    };
+
     render() {
-        // return <h1>Aloha React!</h1>;
-
-        // return(
-        //     <div>
-        //         <h1>Aloha</h1>
-        //         <p>React!</p>
-        //     </div>
-        // )
-
         return (
             <>
                 <h1 className="HSAS">Aloha</h1>
@@ -89,9 +109,28 @@ class App extends React.Component {
                 <LifecycleBtn />
                 <Ref />
                 <RefExample />
+                <AddHr />
                 <ErrorBoundary>
                     <ChildWithError />
                 </ErrorBoundary>
+                <AddHr />
+                <Realtime
+                    inputTextChange={this.inputTextChange}
+                    inputTextRef={this.inputTextRef}
+                    inputTextRefState={this.state.inputTextRefState}
+                />
+                <LiftingStateUp
+                    inputRangeChange={this.inputRangeChange}
+                    inputRangeRef={this.inputRangeRef}
+                    inputRangeRefState={this.state.inputRangeRefState}
+                />
+                <AddHr />
+                <p>
+                    <strong>LiftingStateUp :</strong>
+                </p>
+                <p>input text: {this.state.inputTextRefState}</p>
+                <p>input range: {this.state.inputRangeRefState}</p>
+                <AddHr />
             </>
         );
     }
