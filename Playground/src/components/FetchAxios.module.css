@@ -17,3 +17,15 @@
     display: inline;
     letter-spacing: 1px;
 }
+
+.axios{
+    background: rgb(64, 105, 209);
+    border: 2px solid rgb(171, 234, 255);
+    box-shadow: 0 0 5px rgb(0, 30, 255);
+    color: rgb(51, 0, 0);
+    font-family: sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline;
+    letter-spacing: 1px;
+}

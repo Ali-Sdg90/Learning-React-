@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import styles from "./Fetch.module.css";
+import styles from "./FetchAxios.module.css";
 
 class GetPost extends Component {
     constructor(props) {

@@ -28,6 +28,9 @@ import LiftingStateUp from "./components/LiftingStateUp";
 import HOCChild1 from "./components/HOCChild1";
 import HOCChild2 from "./components/HOCChild2";
 import GetPost from "./components/Fetch";
+import AxiosGet from "./components/AxiosGet";
+import AxiosPost from "./components/AxiosPost";
+import AxiosDelete from "./components/AxiosDelete";
 
 import styles from "./components/App.module.css";
 import "./App.css";
@@ -139,6 +142,9 @@ class App extends React.Component {
                 <HOCChild1 />
                 <HOCChild2 />
                 <GetPost />
+                <AxiosGet />
+                <AxiosPost />
+                <AxiosDelete />
             </>
         );
     }
