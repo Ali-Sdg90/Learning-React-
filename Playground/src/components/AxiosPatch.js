@@ -41,24 +41,22 @@ class AxiosPatch extends Component {
                     <fieldset>
                         <legend>Patch :</legend>
                         <br></br>
-                        <label>
-                            Title:
-                            <input
-                                type="text"
-                                value={this.state.title}
-                                onChange={this.handleTitleChange}
-                            />
-                            <br></br>
-                            <br></br>
-                        </label>
-                        <label>
-                            Body:
-                            <input
-                                type="text"
-                                value={this.state.body}
-                                onChange={this.handleBodyChange}
-                            />
-                        </label>
+                        <label>Title : </label>
+                        <input
+                            type="text"
+                            value={this.state.title}
+                            onChange={this.handleTitleChange}
+                        />
+                        <br></br>
+                        <br></br>
+
+                        <label>Body : </label>
+                        <input
+                            type="text"
+                            value={this.state.body}
+                            onChange={this.handleBodyChange}
+                        />
+
                         <br></br>
                         <br></br>
                         <input type="submit" value="Patch Req"></input>

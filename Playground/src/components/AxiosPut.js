@@ -32,18 +32,17 @@ class AxiosPut extends Component {
                 <br />
                 <form onSubmit={this.handleSubmit}>
                     <fieldset>
-                        <legend>PUT:</legend>
+                        <legend>PUT :</legend>
                         <br />
-                        <label>
-                            Title:
-                            <input
-                                type="text"
-                                value={this.state.title}
-                                onChange={this.handleTitleChange}
-                            />
-                            <br />
-                            <br />
-                        </label>
+                        <label>Title : </label>
+                        <input
+                            type="text"
+                            value={this.state.title}
+                            onChange={this.handleTitleChange}
+                        />
+                        <br />
+                        <br />
+
                         <input type="submit" value="PUT Req" />
                     </fieldset>
                 </form>
