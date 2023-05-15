@@ -81,7 +81,6 @@ class axiosGet extends Component {
                 )}
                 {this.state.showPosts ? "" : <br></br>}
                 <br></br>
-                <hr></hr>
             </div>
         );
     }

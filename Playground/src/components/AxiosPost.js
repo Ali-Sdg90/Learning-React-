@@ -39,7 +39,7 @@ class AxiosPost extends Component {
             : axios
                   .post("https://jsonplaceholder.typicode.com/posts", {
                       title: title,
-                      body,
+                      body: body,
                   })
                   .then((response) =>
                       this.setState(
@@ -89,19 +89,19 @@ class AxiosPost extends Component {
                             onClick={this.postReq}
                             value={showPost ? "Hide Post" : "Post Req"}
                         ></input>
+
+                        {/* {console.log(savePost)} */}
+
+                        {showPost ? (
+                            <div className={styles.container}>
+                                <h3>1. {savePost.title}</h3>
+                                <p>{savePost.body}</p>
+                                <p>Status : {savePost.id}</p>
+                            </div>
+                        ) : (
+                            ""
+                        )}
                     </fieldset>
-
-                    {/* {console.log(savePost)} */}
-
-                    {showPost ? (
-                        <div className={styles.container}>
-                            <h3>1. {savePost.title}</h3>
-                            <p>{savePost.body}</p>
-                            <p>Status : {savePost.id}</p>
-                        </div>
-                    ) : (
-                        ""
-                    )}
                 </form>
             </>
         );
