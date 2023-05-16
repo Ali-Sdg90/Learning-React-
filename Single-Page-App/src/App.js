@@ -7,6 +7,7 @@ import Products from "./components/Products";
 import Product from "./components/Product";
 import Blogs from "./components/Blogs";
 import Blog from "./components/Blog";
+import BlogQuery from "./components/BlogQuery";
 import AboutUs from "./components/AboutUs";
 import Navbar from "./components/Navbar";
 
@@ -30,6 +31,10 @@ class App extends React.Component {
                         <Route
                             path="/blogs/blog/:author?"
                             render={(props) => <Blog {...props} />}
+                        />
+                        <Route
+                            path="/blogQuery"
+                            render={(props) => <BlogQuery {...props} />}
                         />
                         <Route
                             path="/blogs"

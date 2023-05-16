@@ -18,6 +18,11 @@ class Blogs extends Component {
                     <li>
                         <Link to="/blogs/blog/Pari">Pari</Link>
                     </li>
+                    <li>
+                        <Link to="/blogQuery?sortBy=mostSell&Hottest=true">
+                            Blog Query
+                        </Link>
+                    </li>
                 </ul>
             </div>
         );
