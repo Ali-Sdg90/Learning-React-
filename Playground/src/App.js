@@ -30,6 +30,7 @@ import HOCChild2 from "./components/HOCChild2";
 import GetPost from "./components/Fetch";
 import AxiosGet from "./components/AxiosGet";
 import AxiosPost from "./components/AxiosPost";
+import AxiosCatch from "./components/AxiosCatch";
 import AxiosDelete from "./components/AxiosDelete";
 import AxiosPatch from "./components/AxiosPatch";
 import AxiosPut from "./components/AxiosPut";
@@ -37,7 +38,6 @@ import AxiosAll from "./components/AxiosAll";
 
 import styles from "./components/App.module.css";
 import "./App.css";
-import AxiosCatch from "./components/AxiosCatch";
 
 class App extends React.Component {
     constructor(props) {
