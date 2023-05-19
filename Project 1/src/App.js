@@ -1,21 +1,30 @@
 import React, { Component } from "react";
 
 import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
-import Cards from "./components/Cards";
-import Search from "./components/Search";
-import Logos from "./components/Logos";
+import Landing from "./components/Landing";
+import Products from "./components/Products";
 import Footer from "./components/Footer";
+
+import { Switch, Route } from "react-router-dom";
 
 class App extends Component {
     render() {
         return (
             <>
                 <Navbar />
-                <Banner />
-                <Cards />
-                <Search />
-                <Logos />
+
+                <Switch>
+                    <Route
+                        exact
+                        path="/"
+                        render={(props) => <Landing {...props} />}
+                    ></Route>
+                    <Route
+                        path="/"
+                        render={(props) => <Products {...props} />}
+                    ></Route>
+                </Switch>
+
                 <Footer />
             </>
         );

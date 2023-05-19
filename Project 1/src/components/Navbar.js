@@ -3,16 +3,28 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import reactImg from "../images/React-logo.png";
 
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
     return (
         <header className={styles.header}>
             <div className={styles.listContainer}>
                 <ul className={styles.list}>
-                    <li>Home</li>
-                    <li>Products</li>
-                    <li>About Us</li>
-                    <li>Services</li>
-                    <li>FAQ</li>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/products">Products</Link>
+                    </li>
+                    <li>
+                        <Link to="/aboutus">About Us</Link>
+                    </li>
+                    <li>
+                        <Link>Services</Link>
+                    </li>
+                    <li>
+                        <Link>FAQ</Link>
+                    </li>
                 </ul>
             </div>
             <div className={styles.logo}>
