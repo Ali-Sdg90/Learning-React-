@@ -5,7 +5,7 @@ import Landing from "./components/Landing";
 import Products from "./components/Products";
 import Footer from "./components/Footer";
 
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 class App extends Component {
     render() {
@@ -13,17 +13,10 @@ class App extends Component {
             <>
                 <Navbar />
 
-                {/* <Switch> */}
-                    <Route
-                        exact
-                        path="/"
-                        render={(props) => <Landing {...props} />}
-                    ></Route>
-                    <Route
-                        path="/products"
-                        render={(props) => <Products {...props} />}
-                    ></Route>
-                {/* </Switch> */}
+                <Routes>
+                    <Route path="/" element={<Landing />}></Route>
+                    <Route path="/products" element={<Products />}></Route>
+                </Routes>
 
                 <Footer />
             </>
