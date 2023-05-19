@@ -88,7 +88,7 @@ class App extends React.Component {
                 <Info name="Ali" age="21" favColor="Blue" />
                 <Info name="Navid" age="82" favColor="Red" />
                 <Info name="Hanieh" age="21" favColor="Purple">
-                    IlH
+                    HIl
                 </Info>
                 <InfoFunc name="Function" age="Cooler" favColor="undefined" />
                 <AddHr />
