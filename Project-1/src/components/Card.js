@@ -33,6 +33,7 @@ class Card extends Component {
             <div className={styles.container}>
                 <img src={image} alt="programing language" />
                 <h3>{name}</h3>
+
                 <p>
                     salary : {salary}
                     {counter
@@ -41,7 +42,6 @@ class Card extends Component {
                           } $`
                         : ""}
                 </p>
-
                 <div className={styles.counter}>
                     <img
                         src={upArrow}
