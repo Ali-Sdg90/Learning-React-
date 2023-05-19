@@ -18,6 +18,9 @@ class Navbar extends Component {
                 <li>
                     <Link to="/aboutus">About us</Link>
                 </li>
+                <li>
+                    <Link to="/randaddress">Random Address</Link>
+                </li>
             </ul>
         );
     }

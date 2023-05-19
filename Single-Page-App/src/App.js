@@ -10,8 +10,10 @@ import Blog from "./components/Blog";
 import BlogQuery from "./components/BlogQuery";
 import AboutUs from "./components/AboutUs";
 import Navbar from "./components/Navbar";
+import NotFound from "./components/NotFound";
+import RandAddress from "./components/RandAddress";
 
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 class App extends React.Component {
     render() {
@@ -45,9 +47,20 @@ class App extends React.Component {
                             render={(props) => <AboutUs {...props} />}
                         />
                         <Route
+                            path="/randaddress"
+                            render={(props) => <RandAddress {...props} />}
+                        />
+                        <Route
+                            path="/notfound"
+                            render={(props) => <NotFound {...props} />}
+                        />
+                        <Redirect from="/aliSadeghi" to="/products" />
+                        <Route
+                            exact
                             path="/"
                             render={(props) => <HomePage {...props} />}
                         />
+                        <Redirect to="/notfound" />
                     </Switch>
                 </div>
             </>
