@@ -9,7 +9,8 @@
     transition: opacity 1.5s;
     width: 330px;
     position: relative;
-    height: 580px;
+    display: grid;
+    align-items: flex-end;
 }
 
 .container:hover{
@@ -41,9 +42,6 @@
     display: flex;
     justify-content: center;
     border-top: 1px solid silver;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 .counter img {

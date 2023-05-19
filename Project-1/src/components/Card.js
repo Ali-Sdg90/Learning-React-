@@ -31,17 +31,19 @@ class Card extends Component {
         const { counter } = this.state;
         return (
             <div className={styles.container}>
-                <img src={image} alt="programing language" />
-                <h3>{name}</h3>
+                <div className={styles.imgAndInfo}>
+                    <img src={image} alt="programing language" />
+                    <h3>{name}</h3>
 
-                <p>
-                    salary : {salary}
-                    {counter
-                        ? ` x ${counter} = ${
-                              counter * Number(salary.split(" ")[0])
-                          } $`
-                        : ""}
-                </p>
+                    <p>
+                        salary : {salary}
+                        {counter
+                            ? ` x ${counter} = ${
+                                  counter * Number(salary.split(" ")[0])
+                              } $`
+                            : ""}
+                    </p>
+                </div>
                 <div className={styles.counter}>
                     <img
                         src={upArrow}
