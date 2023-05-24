@@ -34,6 +34,8 @@ class Cards extends Component {
                             image={lang.image}
                             name={lang.name}
                             salary={lang.salary}
+                            id={lang.id}
+                            key={lang.id}
                         />
                     );
                 })}

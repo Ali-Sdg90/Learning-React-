@@ -39,6 +39,7 @@ class Products extends Component {
                                     image={product.image}
                                     name={product.title}
                                     salary={`${product.price} $`}
+                                    key={product.id}
                                 />
                             );
                         })

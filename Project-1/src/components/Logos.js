@@ -29,6 +29,7 @@ class Logos extends Component {
                                 name={logo.name}
                                 src={logo.src}
                                 id={logo.name}
+                                key={logo.name}
                             />
                         );
                     })}

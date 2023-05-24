@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { Link } from "react-router-dom";
+
 import upArrow from "../images/up-arrow.svg";
 import downArrow from "../images/down-arrow.svg";
 import styles from "./Card.module.css";
@@ -27,13 +29,15 @@ class Card extends Component {
     };
 
     render() {
-        const { image, name, salary } = this.props;
+        const { image, name, salary, id } = this.props;
         const { counter } = this.state;
         return (
             <div className={styles.container}>
                 <div className={styles.imgAndInfo}>
                     <img src={image} alt="programing language" />
-                    <h3>{name}</h3>
+                    <h3>
+                        <Link to={`/products/${id}`}>{name}</Link>
+                    </h3>
 
                     <p>
                         salary : {salary}
