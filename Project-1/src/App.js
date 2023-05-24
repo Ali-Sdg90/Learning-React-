@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import { Routes, Route, Navigate } from "react-router-dom";
 import PageNotFound from "./components/PageNotFound";
 import AboutUs from "./components/AboutUs";
+import Programmers from "./components/Programmers";
+import Drivers from "./components/Drivers";
 
 class App extends Component {
     render() {
@@ -23,7 +25,10 @@ class App extends Component {
                         path="/products/:id"
                         element={<DetailPage />}
                     ></Route>
-                    <Route path="/aboutus/*" element={<AboutUs />}></Route>
+                    <Route path="/aboutus" element={<AboutUs />}>
+                        <Route path="programmers" element={<Programmers />} />
+                        <Route path="drivers" element={<Drivers />} />
+                    </Route>
                     <Route
                         path="/*"
                         element={<Navigate to="/notfound" />}

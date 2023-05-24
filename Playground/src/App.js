@@ -1,5 +1,8 @@
 import React from "react";
 
+import styles from "./components/App.module.css";
+import "./App.css";
+
 import DynamicContent from "./components/DynamicContent";
 import Hi from "./components/Hi";
 import Info from "./components/Info";
@@ -35,9 +38,7 @@ import AxiosDelete from "./components/AxiosDelete";
 import AxiosPatch from "./components/AxiosPatch";
 import AxiosPut from "./components/AxiosPut";
 import AxiosAll from "./components/AxiosAll";
-
-import styles from "./components/App.module.css";
-import "./App.css";
+import Hooks from "./components/Hooks";
 
 class App extends React.Component {
     constructor(props) {
@@ -153,6 +154,7 @@ class App extends React.Component {
                 <AxiosPatch />
                 <AxiosPut />
                 <AxiosAll />
+                <Hooks />
             </>
         );
     }
