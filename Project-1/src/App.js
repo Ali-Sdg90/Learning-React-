@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 import { Routes, Route, Navigate } from "react-router-dom";
 import PageNotFound from "./components/PageNotFound";
+import AboutUs from "./components/AboutUs";
 
 class App extends Component {
     render() {
@@ -22,6 +23,7 @@ class App extends Component {
                         path="/products/:id"
                         element={<DetailPage />}
                     ></Route>
+                    <Route path="/aboutus/*" element={<AboutUs />}></Route>
                     <Route
                         path="/*"
                         element={<Navigate to="/notfound" />}
