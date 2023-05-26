@@ -1,7 +1,9 @@
 import React from "react";
-import UseState from "./UseState";
 
 import Styles from "./Hooks.module.css";
+
+import UseState from "./UseState";
+import UseEffect from "./UseEffects";
 
 const Hooks = () => {
     return (
@@ -12,7 +14,9 @@ const Hooks = () => {
                 <li>
                     <UseState />
                 </li>
-                
+                <li>
+                    <UseEffect />
+                </li>
             </ul>
         </div>
     );

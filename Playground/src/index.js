@@ -18,7 +18,7 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
     (response) => {
-        console.log(`A response has been received from ${response.url}`);
+        console.log(`A response has been received from ${response.config.url}`);
         return response;
     },
     (error) => {
@@ -26,5 +26,6 @@ axios.interceptors.response.use(
         return Promise.reject(error);
     }
 );
+
 
 ReactDom.render(<App />, document.getElementById("root"));
