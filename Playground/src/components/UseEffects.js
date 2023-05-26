@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import UseEffect1 from "./UseEffectUpdate";
 import UseEffect2 from "./UseEffectUn-Mount";
-import UseEffectGetAxios from "./UseEffectGetAxios";
+import UseEffect3 from "./UseEffectGetAxios";
 
 const UseEffect = () => {
-    // const [showUseEffect, setShowUseEffect] = useState(false);
     const [showUseEffect1, setShowUseEffect1] = useState(false);
     const [showUseEffect2, setShowUseEffect2] = useState(false);
     const [showUseEffect3, setShowUseEffect3] = useState(false);
@@ -17,7 +16,7 @@ const UseEffect = () => {
             <ol>
                 <li>
                     <div>
-                    <p>Mount & Update only number:</p>
+                        <p>Mount & Update only number:</p>
                         <button
                             onClick={() =>
                                 setShowUseEffect1((prevstate) => !prevstate)
@@ -41,7 +40,7 @@ const UseEffect = () => {
                         {showUseEffect2 ? <UseEffect2 /> : ""}
                     </div>
                 </li>
-                <li>
+                <li style={{ border: "none" }}>
                     <div>
                         <p>Get on Mount:</p>
                         <button
@@ -51,7 +50,7 @@ const UseEffect = () => {
                         >
                             Show useEffect3
                         </button>
-                        {showUseEffect3 ? <UseEffectGetAxios /> : ""}
+                        {showUseEffect3 ? <UseEffect3 /> : ""}
                     </div>
                 </li>
             </ol>

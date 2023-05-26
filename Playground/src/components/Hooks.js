@@ -4,6 +4,7 @@ import Styles from "./Hooks.module.css";
 
 import UseState from "./UseState";
 import UseEffect from "./UseEffects";
+import UseReducer from "./UseReducer";
 
 const Hooks = () => {
     return (
@@ -16,6 +17,9 @@ const Hooks = () => {
                 </li>
                 <li>
                     <UseEffect />
+                </li>
+                <li>
+                    <UseReducer />
                 </li>
             </ul>
         </div>
