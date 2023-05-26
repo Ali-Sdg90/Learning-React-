@@ -12,9 +12,7 @@ const Hooks = () => {
                 <li>
                     <UseState />
                 </li>
-                <li>
-                    <UseState />
-                </li>
+                
             </ul>
         </div>
     );

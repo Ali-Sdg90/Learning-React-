@@ -16,10 +16,12 @@ li:last-child {
 }
 
 li {
-    background: rgb(25, 28, 26);
-    padding: 10px;
+    /* background: rgb(25, 28, 26); */
+    background: rgb(28, 31, 29);
+    padding: 10px 20px;
     border-bottom: 2px solid rgb(58, 58, 58);
     padding-bottom: 40px;
+    box-shadow: 0 0 10px rgb(28, 31, 29);
 }
 
 li h2 {

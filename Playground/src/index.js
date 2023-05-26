@@ -27,5 +27,4 @@ axios.interceptors.response.use(
     }
 );
 
-// ReactDom.render(<h1>Ali</h1>, document.getElementById("root"));
 ReactDom.render(<App />, document.getElementById("root"));
