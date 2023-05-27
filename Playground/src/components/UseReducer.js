@@ -1,5 +1,6 @@
 import React, { useReducer } from "react";
 import HalfHr from "./HalfHr";
+import UseReducerGet from "./UseReducerGet";
 import UseReducerWObj from "./UseReducerWObj";
 
 const initialState = 0;
@@ -34,6 +35,9 @@ const UseReducer = () => {
                 </li>
                 <li>
                     <UseReducerWObj />
+                </li>
+                <li>
+                    <UseReducerGet />
                 </li>
             </ol>
         </div>

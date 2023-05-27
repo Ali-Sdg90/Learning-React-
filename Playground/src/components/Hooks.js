@@ -5,6 +5,7 @@ import Styles from "./Hooks.module.css";
 import UseState from "./UseState";
 import UseEffect from "./UseEffects";
 import UseReducer from "./UseReducer";
+import UseReducerGet from "./UseReducerGet";
 
 const Hooks = () => {
     return (
