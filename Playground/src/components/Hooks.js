@@ -7,6 +7,8 @@ import UseEffect from "./UseEffects";
 import UseReducer from "./UseReducer";
 import UseReducerGet from "./UseReducerGet";
 import UseRef from "./UseRef";
+import CustomHookUseTitle from "./CustomHookUseTitle";
+import CustomHookUseLocalStorge from "./CustomHookUseLocalStorge";
 
 const Hooks = () => {
     return (
@@ -25,6 +27,19 @@ const Hooks = () => {
                 </li>
                 <li>
                     <UseRef />
+                </li>
+                <li>
+                    <h2>Custom Hooks</h2>
+                    <ol>
+                        <li>
+                            <h2>UseTitle</h2>
+                            <CustomHookUseTitle />
+                        </li>
+                        <li style={{ border: "none" }}>
+                            <h2>UseLocalStorage</h2>
+                            <CustomHookUseLocalStorge />
+                        </li>
+                    </ol>
                 </li>
             </ul>
         </div>
