@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import HalfHr from "./HalfHr";
 import UseReducerGet from "./UseReducerGet";
 import UseReducerWObj from "./UseReducerWObj";
@@ -21,6 +21,8 @@ const reducer = (state, action) => {
 const UseReducer = () => {
     const [number, dispatch] = useReducer(reducer, initialState);
 
+    const [showGetComp, setShowGetComp] = useState(false);
+
     return (
         <div>
             <h2>UseReducer</h2>
@@ -36,8 +38,16 @@ const UseReducer = () => {
                 <li>
                     <UseReducerWObj />
                 </li>
-                <li>
-                    <UseReducerGet />
+                <li style={{ border: "none" }}>
+                    <button
+                        onClick={() => setShowGetComp(!showGetComp)}
+                        style={{ background: "rgb(93, 0, 0)" }}
+                    >
+                        {showGetComp ? "Hide component" : "Show component"}
+                    </button>
+                    <br></br>
+                    <br></br>
+                    {showGetComp ? <UseReducerGet /> : ""}
                 </li>
             </ol>
         </div>

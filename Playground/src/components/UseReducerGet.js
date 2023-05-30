@@ -97,7 +97,7 @@ const UseReducerGet = () => {
                     <p>Description: {product.data.description}</p>
                 </>
             ) : (
-                <h3>{product.errorMessage}</h3>
+                <h3>Out of range</h3>
             )}
 
             {console.log("===>", product.data)}

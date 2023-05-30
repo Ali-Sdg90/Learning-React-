@@ -6,6 +6,7 @@ import UseState from "./UseState";
 import UseEffect from "./UseEffects";
 import UseReducer from "./UseReducer";
 import UseReducerGet from "./UseReducerGet";
+import UseRef from "./UseRef";
 
 const Hooks = () => {
     return (
@@ -21,6 +22,9 @@ const Hooks = () => {
                 </li>
                 <li>
                     <UseReducer />
+                </li>
+                <li>
+                    <UseRef />
                 </li>
             </ul>
         </div>
