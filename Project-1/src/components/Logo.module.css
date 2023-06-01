@@ -1,0 +1,25 @@
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.shake{
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% {
+        transform: scale(1.05) translateX(0);
+    }
+    25% {
+        transform: scale(1.05) translateX(-5px);
+    }
+    50% {
+        transform: scale(1.05) translateX(5px);
+    }
+    75% {
+        transform: scale(1.05) translateX(-5px);
+    }
+    100% {
+        transform: scale(1.05) translateX(0);
+    }
+}

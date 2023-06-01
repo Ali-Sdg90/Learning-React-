@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Class Project</title>
+    </head>
+    <body>
+        <form id="form">
+            <label for="name">Name:</label><br />
+            <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                autocomplete="off"
+                onclick="this.value = ''"
+                autofocus
+            />
+            <br />
+            <label for="last-name">Last-name:</label><br />
+            <input
+                type="text"
+                name="last-name"
+                id="last-name"
+                required
+                autocomplete="off"
+                onclick="this.value = ''"
+            />
+            <br />
+            <label for="age">Age:</label><br />
+            <input
+                type="text"
+                name="age"
+                id="age"
+                required
+                autocomplete="off"
+                onclick="this.value = ''"
+            />
+            <br /><br />
+            <input type="submit" value="Submit" id="submit" />
+            <input type="button" value="Show Members" id="show-members" />
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>
