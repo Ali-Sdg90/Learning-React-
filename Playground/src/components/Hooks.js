@@ -9,6 +9,7 @@ import UseReducerGet from "./UseReducerGet";
 import UseRef from "./UseRef";
 import CustomHookUseTitle from "./CustomHookUseTitle";
 import CustomHookUseLocalStorge from "./CustomHookUseLocalStorge";
+import UseContext1 from "./UseContext1";
 
 const Hooks = () => {
     return (
@@ -27,6 +28,9 @@ const Hooks = () => {
                 </li>
                 <li>
                     <UseRef />
+                </li>
+                <li>
+                    <UseContext1 />
                 </li>
                 <li>
                     <h2>Custom Hooks</h2>
