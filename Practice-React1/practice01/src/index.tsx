@@ -7,6 +7,8 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
 
+import { BrowserRouter } from "react-router-dom";
+
 axios.interceptors.request.use(
     (request) => {
         console.log(`A "${request.method}" request sent to ${request.url}`);
@@ -33,4 +35,8 @@ const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
 
-root.render(<App />);
+root.render(
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+);
