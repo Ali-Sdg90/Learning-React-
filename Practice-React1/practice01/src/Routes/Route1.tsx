@@ -1,16 +1,7 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 
 const Route1 = () => {
-    const params = useParams();
-
-    return (
-        <>
-            <div className="bg-success display-4 px-5">You are in Route 1</div>
-            <p>params.id: {params.value}</p>
-            {console.log(params)}
-        </>
-    );
+    return <div className="text-center display-5 fw-bold">R1</div>;
 };
 
 export default Route1;

@@ -7,7 +7,7 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.scss";
 
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 
 axios.interceptors.request.use(
     (request) => {
@@ -36,7 +36,7 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-    <BrowserRouter>
+    // <BrowserRouter>
         <App />
-    </BrowserRouter>
+    // </BrowserRouter>
 );
