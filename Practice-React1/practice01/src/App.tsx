@@ -2,6 +2,9 @@ import React, { useState, createContext } from "react";
 import NumberCounter from "./NumberCounter";
 import Context1 from "./Context-Folder/Context1";
 import ReactRouterDom from "./ReactRouterDom";
+import PhonePrefix from "./react-phone-number-input/PhonePrefix";
+import PhonePrefix2 from "./react-phone-number-input/PhonePrefix2";
+import PhonePrefix3 from "./react-phone-number-input/PhonePrefix3";
 
 export const ThemeContext = createContext({
     theme: "info",
@@ -21,6 +24,12 @@ const App = () => {
             </ThemeContext.Provider>
 
             <ReactRouterDom></ReactRouterDom>
+
+            <PhonePrefix />
+            <br />
+            <PhonePrefix2 />
+            <br />
+            <PhonePrefix3 />
         </div>
     );
 };
