@@ -39,6 +39,7 @@ import AxiosPatch from "./components/AxiosPatch";
 import AxiosPut from "./components/AxiosPut";
 import AxiosAll from "./components/AxiosAll";
 import Hooks from "./components/Hooks";
+import Li from "./components/practice1/Li";
 
 class App extends React.Component {
     constructor(props) {
@@ -155,6 +156,10 @@ class App extends React.Component {
                 <AxiosPut />
                 <AxiosAll />
                 <Hooks />
+
+                <AddHr />
+
+                <Li />
             </>
         );
     }
