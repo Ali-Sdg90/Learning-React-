@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AppContext } from "./App";
 
-const Input = ({ setTodosList }) => {
+const Input = () => {
+    const { setTodosList } = useContext(AppContext);
+
     const [inputText, setInputText] = useState("");
 
     const inputHandler = (event) => {

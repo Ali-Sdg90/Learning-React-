@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import TodoList from "./TodoList";
 import Input from "./Input";
 import FilterTodo from "./FilterTodo";
-import "./app.css"
+import "./app.css";
+
+export const AppContext = React.createContext();
 
 const todos = [
     { todo: "hi1", id: 1, isDone: false },
@@ -17,7 +19,7 @@ const App = () => {
     const [filterMode, setFilterMode] = useState("all");
 
     useEffect(() => {
-        console.log(todosList);
+        console.log("=>", todosList);
         setFilteredTodosList(todosList);
 
         switch (filterMode) {
@@ -44,14 +46,31 @@ const App = () => {
     return (
         <div>
             <h1>Simple Todo App</h1>
-            <Input setTodosList={setTodosList} />
-            <FilterTodo
-                todosList={todosList}
-                setFilteredTodosList={setFilteredTodosList}
-                filterMode={filterMode}
-                setFilterMode={setFilterMode}
-            />
-            <TodoList todos={filteredTodosList} setTodosList={setTodosList} />
+            <AppContext.Provider
+                value={{
+                    setTodosList,
+                    todosList,
+                    setFilteredTodosList,
+                    filterMode,
+                    setFilterMode,
+                    filteredTodosList,
+                    setTodosList,
+                }}
+            >
+                <Input
+                // setTodosList={setTodosList}
+                />
+                <FilterTodo
+                // todosList={todosList}
+                // setFilteredTodosList={setFilteredTodosList}
+                // filterMode={filterMode}
+                // setFilterMode={setFilterMode}
+                />
+                <TodoList
+                // todos={filteredTodosList}
+                // setTodosList={setTodosList}
+                />
+            </AppContext.Provider>
         </div>
     );
 };

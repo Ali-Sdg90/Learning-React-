@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Todo from "./Todo";
+import { AppContext } from "./App";
 
-const TodoList = ({ todos, setTodosList }) => {
+const TodoList = () => {
+    const { filteredTodosList, setTodosList } = useContext(AppContext);
+
     return (
         <ol>
-            {/* {console.log(todos)} */}
-            {todos.map((todo) => {
+            {/* {console.log(filteredTodosList)} */}
+            {filteredTodosList.map((todo) => {
                 return (
                     <Todo
                         key={todo.id}
                         todo={todo.todo}
                         id={todo.id}
                         isDone={todo.isDone}
-                        todos={todos}
+                        todos={filteredTodosList}
                         setTodosList={setTodosList}
                     ></Todo>
                 );

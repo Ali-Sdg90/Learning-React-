@@ -1,32 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import { AppContext } from "./App";
 
-const FilterTodo = ({
-    setFilteredTodosList,
-    todosList,
-    filterMode,
-    setFilterMode,
-}) => {
+const FilterTodo = () => {
+    const { setFilteredTodosList, todosList, filterMode, setFilterMode } =
+        useContext(AppContext);
+
     useEffect(() => {
         switch (filterMode) {
             case "all":
                 setFilteredTodosList([...todosList]);
                 break;
             case "inProgress":
-                setFilteredTodosList(() =>
-                    todosList.filter((todo) => {
-                        return !todo.isDone && todo;
-                    })
+                setFilteredTodosList(
+                    todosList.filter((todo) => !todo.isDone && todo)
                 );
                 break;
             case "done":
-                setFilteredTodosList(() =>
-                    todosList.filter((todo) => {
-                        return todo.isDone && todo;
-                    })
+                setFilteredTodosList(
+                    todosList.filter((todo) => todo.isDone && todo)
                 );
                 break;
         }
-    }, [filterMode]);
+    }, [filterMode, todosList]);
 
     return (
         <div>
