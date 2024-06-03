@@ -7,9 +7,6 @@ const FilterTodo = () => {
 
     useEffect(() => {
         switch (filterMode) {
-            case "all":
-                setFilteredTodosList([...todosList]);
-                break;
             case "inProgress":
                 setFilteredTodosList(
                     todosList.filter((todo) => !todo.isDone && todo)
@@ -20,8 +17,10 @@ const FilterTodo = () => {
                     todosList.filter((todo) => todo.isDone && todo)
                 );
                 break;
+            default:
+                setFilteredTodosList([...todosList]);
         }
-    }, [filterMode, todosList]);
+    }, [filterMode, todosList, setFilteredTodosList]);
 
     return (
         <div>

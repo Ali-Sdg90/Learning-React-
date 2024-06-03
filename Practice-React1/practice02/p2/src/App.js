@@ -23,25 +23,20 @@ const App = () => {
         setFilteredTodosList(todosList);
 
         switch (filterMode) {
-            case "all":
-                setFilteredTodosList([...todosList]);
-                break;
             case "inProgress":
-                setFilteredTodosList(() =>
-                    todosList.filter((todo) => {
-                        return !todo.isDone && todo;
-                    })
+                setFilteredTodosList(
+                    todosList.filter((todo) => !todo.isDone && todo)
                 );
                 break;
             case "done":
-                setFilteredTodosList(() =>
-                    todosList.filter((todo) => {
-                        return todo.isDone && todo;
-                    })
+                setFilteredTodosList(
+                    todosList.filter((todo) => todo.isDone && todo)
                 );
                 break;
+            default:
+                setFilteredTodosList([...todosList]);
         }
-    }, [todosList]);
+    }, [todosList, filterMode, setFilteredTodosList]);
 
     return (
         <div>
@@ -57,19 +52,9 @@ const App = () => {
                     setTodosList,
                 }}
             >
-                <Input
-                // setTodosList={setTodosList}
-                />
-                <FilterTodo
-                // todosList={todosList}
-                // setFilteredTodosList={setFilteredTodosList}
-                // filterMode={filterMode}
-                // setFilterMode={setFilterMode}
-                />
-                <TodoList
-                // todos={filteredTodosList}
-                // setTodosList={setTodosList}
-                />
+                <Input />
+                <FilterTodo />
+                <TodoList />
             </AppContext.Provider>
         </div>
     );

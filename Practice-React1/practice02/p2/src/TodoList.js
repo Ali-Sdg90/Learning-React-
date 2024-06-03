@@ -7,7 +7,6 @@ const TodoList = () => {
 
     return (
         <ol>
-            {/* {console.log(filteredTodosList)} */}
             {filteredTodosList.map((todo) => {
                 return (
                     <Todo

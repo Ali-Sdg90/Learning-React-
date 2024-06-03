@@ -3,7 +3,6 @@ import { AppContext } from "./App";
 
 const Input = () => {
     const { setTodosList } = useContext(AppContext);
-
     const [inputText, setInputText] = useState("");
 
     const inputHandler = (event) => {
@@ -22,18 +21,26 @@ const Input = () => {
         };
 
         setTodosList((prevTodoList) => [...prevTodoList, newTodo]);
-
         setInputText("");
+    };
+
+    const keyHandler = (event) => {
+        if (event.key === "Enter") {
+            submitHandler();
+        }
     };
 
     return (
         <div>
             <input
-                onChange={(event) => inputHandler(event)}
+                onChange={inputHandler}
+                onKeyDown={keyHandler}
                 type="text"
                 value={inputText}
-            ></input>
-            <button onClick={() => submitHandler()}>Submit</button>
+            />
+            <button onClick={submitHandler} disabled={!inputText}>
+                Submit
+            </button>
         </div>
     );
 };

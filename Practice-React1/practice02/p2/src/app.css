@@ -7,3 +7,10 @@ body {
     background-color: #c6c6c6;
     font-family: sans-serif;
 }
+
+body > div{
+    background-color: rgb(173, 173, 173);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);
+}

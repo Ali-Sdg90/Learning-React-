@@ -2,12 +2,8 @@ import React from "react";
 
 const Todo = ({ todo, isDone, id, setTodosList }) => {
     const checkboxHandler = () => {
-        // console.log("ID", id);
-
         setTodosList((prevTodoList) => {
-            // console.log("=>", prevTodoList);
             return prevTodoList.map((todo, index) => {
-                // console.log("todo", todo);
                 if (todo.id === id) {
                     return { ...todo, isDone: !todo.isDone };
                 }
@@ -24,16 +20,15 @@ const Todo = ({ todo, isDone, id, setTodosList }) => {
 
     return (
         <li>
-            {/* {console.log(todo, isDone, id)} */}
             <span style={{ textDecoration: isDone ? "line-through" : "none" }}>
                 {todo}
             </span>
             <input
                 type="checkbox"
                 checked={isDone}
-                onChange={() => checkboxHandler()}
+                onChange={checkboxHandler}
             />
-            <button onClick={() => deleteHandler()}>Delete</button>
+            <button onClick={deleteHandler}>Delete</button>
         </li>
     );
 };
